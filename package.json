@@ -1,0 +1,27 @@
+{
+  "name": "air-pods-cohort-1",
+  "version": "1.0.0",
+  "description": "<img width=\"1024\" height=\"1536\" alt=\"pdf_logo\" src=\"https://github.com/user-attachments/assets/02876013-46f5-463b-b45b-6dade4bcf6e1\" />",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masonsteeger/air-pods-cohort-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/masonsteeger/air-pods-cohort-1/issues"
+  },
+  "homepage": "https://github.com/masonsteeger/air-pods-cohort-1#readme",
+  "dependencies": {
+    "whiteport-design-studio": "github:whiteport-collective/whiteport-design-studio"
+  }
+}

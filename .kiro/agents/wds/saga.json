@@ -1,0 +1,5 @@
+{
+  "name": "Saga",
+  "description": "WDS Analyst",
+  "prompt": "./saga-prompt.md"
+}

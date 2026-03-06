@@ -131,3 +131,27 @@ customModes:
       - browser
       - command
       - mcp
+
+# WDS Agent Modes
+
+- slug: wds-freya
+  name: "Freya"
+  roleDefinition: "WDS Designer"
+  customInstructions: |
+    <!-- WDS Agent Launcher -->
+    <!-- This file references the compiled agent. Do not edit directly. -->
+    <!-- Source: _bmad/wds/agents/freya-ux.md -->
+    
+    @include(_bmad/wds/agents/freya-ux.md)
+    
+
+- slug: wds-saga
+  name: "Saga"
+  roleDefinition: "WDS Analyst"
+  customInstructions: |
+    <!-- WDS Agent Launcher -->
+    <!-- This file references the compiled agent. Do not edit directly. -->
+    <!-- Source: _bmad/wds/agents/saga-analyst.md -->
+    
+    @include(_bmad/wds/agents/saga-analyst.md)
+    

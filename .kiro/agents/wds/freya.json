@@ -1,0 +1,5 @@
+{
+  "name": "Freya",
+  "description": "WDS Designer",
+  "prompt": "./freya-prompt.md"
+}
