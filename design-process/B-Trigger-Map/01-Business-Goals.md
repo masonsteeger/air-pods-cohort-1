@@ -7,56 +7,61 @@
 
 ---
 
-## Goal 1: Maximize Community Visibility
+## Goal 1: Reduce Operational Friction
+
+*Free Dawn from low-value calendar maintenance so she can focus on high-value community relationship building — automate the busywork, amplify the human connection.*
+
+### Objectives
+
+- **1.1:** 80% reduction in ad-hoc "what's coming up?" inquiries to Dawn within 3 months of launch
+- **1.2:** Zero new data-entry tasks required from Dawn (the sheet she already maintains is the only input)
+- **1.3:** Calendar updates reflect sheet changes within 24 hours (best-effort automation, not real-time)
+- **1.4:** Dawn reports increased capacity for direct organizer engagement and relationship-building activities
+
+---
+
+## Goal 2: Maximize Community Visibility
 
 *Make Improving's community investment visible to the DFW tech ecosystem — every hosted event discoverable, every group findable.*
 
 ### Objectives
 
-- **1.1:** 100% of active Improving-hosted user groups listed on the public calendar within 30 days of launch
-- **1.2:** 500+ unique monthly visitors to the calendar page within 6 months of launch
-- **1.3:** At least 3 external referral sources (blog posts, social shares, organizer links) pointing to the calendar within 3 months
+- **2.1:** 100% of active Improving-hosted user groups listed on the public calendar within 30 days of launch
+- **2.2:** 500+ unique monthly visitors to the calendar page within 6 months of launch
+- **2.3:** At least 3 external referral sources (blog posts, social shares, organizer links) pointing to the calendar within 3 months
 
 ---
 
-## Goal 2: Increase Event Attendance
+## Goal 3: Strengthen Community Connections
 
-*Drive new attendees to Improving-hosted user groups by removing the discovery barrier — people who would attend if they knew.*
-
-### Objectives
-
-- **2.1:** 15% increase in average event attendance across all groups within 6 months (measured via Meetup RSVP data)
-- **2.2:** At least 5 groups report new attendees who discovered them through the calendar (qualitative organizer feedback)
-- **2.3:** 30%+ of calendar visitors click through to at least one Meetup event page (click-through rate)
-
----
-
-## Goal 3: Reduce Operational Friction
-
-*Eliminate ad-hoc event inquiries and make Dawn's existing sheet the effortless single source of truth — zero new work required.*
+*Convert calendar visibility into meaningful relationships — grow Improving's network of engaged community members who enter the CRM pipeline.*
 
 ### Objectives
 
-- **3.1:** 80% reduction in ad-hoc "what's coming up?" inquiries to Dawn within 3 months of launch
-- **3.2:** Zero new data-entry tasks required from Dawn (the sheet she already maintains is the only input)
-- **3.3:** Calendar updates reflect sheet changes within 24 hours (best-effort automation, not real-time)
+- **3.1:** 50+ new CRM contacts added from calendar-driven engagement within 6 months of launch
+- **3.2:** At least 5 user group organizers report new attendees who discovered them through the calendar (qualitative feedback)
+- **3.3:** 30%+ of calendar visitors click through to at least one Meetup event page (engagement rate)
+- **3.4:** 20% of calendar visitors take a secondary action (contact form, social follow, newsletter signup)
 
 ---
 
 ## Goal Hierarchy
 
 ```
-Goal 1: Maximize Community Visibility (PRIMARY)
-  └── Enables Goal 2 (can't attend what you can't find)
-  └── Enables Goal 3 (visible calendar replaces ad-hoc inquiries)
+Goal 1: Reduce Operational Friction (PRIMARY)
+  └── Frees Dawn to focus on high-value relationship building vs. manual calendar work
+  └── Enables sustainable community engagement without increasing operational burden
+  └── CRITICAL: If Dawn's workload increases, the product fails regardless of other metrics
 
-Goal 2: Increase Event Attendance (PREREQUISITE)
-  └── Validates Goal 1 (visibility without attendance = failure)
-  └── Drives Improving's ROI on hosting investment
+Goal 2: Maximize Community Visibility (ENABLER)
+  └── Becomes possible once Dawn's time is freed for strategic work
+  └── Automated calendar makes Improving's community investment discoverable
+  └── Enables Goal 3 (can't build connections if people can't find events)
 
-Goal 3: Reduce Operational Friction (PREREQUISITE)
-  └── Sustainability condition: if Dawn's burden increases, the product fails
-  └── Enables long-term maintenance without dedicated resources
+Goal 3: Strengthen Community Connections (VALIDATION)
+  └── Proves that reduced friction + visibility = meaningful relationships
+  └── CRM growth validates that the calendar drives real engagement, not just pageviews
+  └── Drives Improving's ROI on community investment through relationship pipeline
 ```
 
 ---

@@ -50,46 +50,81 @@ Pete finds the calendar via Google search ("tech meetups Dallas"), a colleague's
 
 ---
 
-## Priority 2: Imani the Improver — Internal Employee
+## Priority 2: Oscar the Organizer — External Group Leader
 
-### Who Imani Is
+### Who Oscar Is
 
-Imani is a senior consultant at Improving who's been with the company for two years. She works on client projects during the day and often stays late. She's walked past conference rooms buzzing with meetup energy but has no idea what groups are meeting or whether she'd be welcome to sit in.
+Oscar is a senior engineer who volunteers to run the DFW Pythoneers meetup at Improving's Dallas office. He's been organizing for 3 years, handles his own Meetup.com page, and coordinates with Dawn for room and food. He has 40-60 regular members but wants to grow.
 
 ### Psychological Profile
 
-Imani is **curious and community-minded** — she chose Improving partly because of its community reputation. But she's also **busy and protective of her evening time**. She won't wander into a random room; she needs to know in advance what's happening so she can plan. She values **intentionality** — if she's staying late, she wants it to be for something worthwhile.
+Oscar is **passionate about his community but stretched thin**. He organizes because he loves the topic and the people, not because he has spare time. He does everything — finds speakers, promotes events, manages RSVPs, handles no-shows. His biggest growth constraint isn't content quality; it's **reach**. New people don't find his group unless someone tells them.
 
-She feels a quiet **FOMO** about the groups meeting in her own building. She's heard colleagues mention "the Kubernetes group" or "the Python meetup" but doesn't know when they meet or if they're open to Improving employees. There's an **identity tension**: she works here, but these are external community groups. Is she an insider or a guest?
+Oscar values **low-effort amplification** — anything that puts his group in front of new eyes without requiring him to do more marketing work. He already maintains his Meetup page; he doesn't want another platform to update. A unified Improving calendar that lists his group alongside 19 others is **free marketing** he didn't have to create.
 
 ### Internal State
 
-When Imani thinks about the user groups, she feels **curious but uncertain**. She'd love to attend but doesn't want to intrude or commit to something that doesn't fit. When she discovers a group that aligns with her interests, she feels **validated** — "I work at the right company."
+When Oscar thinks about growing his group, he feels **optimistic but resource-constrained**. He knows the content is good — retention is high. The gap is discovery. When he imagines a calendar that lists his group alongside others at Improving, he feels **excited about the halo effect** — being part of a portfolio makes each group look more legitimate.
 
 ### Usage Context
 
-Imani checks the calendar from her desk, usually on Monday or Tuesday, planning her week. She's looking for **this week's events** specifically — not browsing broadly. She wants to see: What's happening Thursday? Is it relevant to my work? Can I just show up? She might also use it to recommend groups to new hires: "Check the calendar — there's a great UX group on the second Wednesday."
+Oscar's interaction with the calendar is primarily as a **beneficiary, not a user**. He might share the calendar link on his Meetup page ("See all groups at Improving") or mention it when recruiting speakers ("We're part of Improving's community portfolio"). He checks it occasionally to verify his group's listing is accurate. His success metric: new attendees who say "I found you on Improving's calendar."
 
 ### Relationship to Business Goals
 
-- ✅ **Maximize Community Visibility:** Imani becomes an internal ambassador, sharing the calendar with new hires and clients
-- ✅ **Increase Event Attendance:** Imani adds 1-2 attendees per event she joins, and her presence signals Improving's investment
-- ✅ **Reduce Operational Friction:** Imani currently asks Dawn or colleagues; the calendar answers her questions directly
+- ✅ **Maximize Community Visibility:** Oscar's group is part of the content that makes the calendar valuable
+- ✅ **Increase Event Attendance:** Oscar directly benefits from new attendees driven by the calendar
 
 ### Positive Driving Forces
 
-1. **Know what's happening in my own building this week** — plan intentionally, not discover by accident (Frequency: 5, Intensity: 4, Fit: 5 = **14 HIGH**)
-2. **Find groups aligned with my professional growth** — discover relevant learning opportunities at zero cost (Frequency: 3, Intensity: 4, Fit: 4 = **11 MEDIUM**)
-3. **Share the calendar with new hires and clients** — be a connector, strengthen Improving's culture story (Frequency: 2, Intensity: 3, Fit: 4 = **9 LOW**)
+1. **Free discovery channel for new members** — the calendar markets his group without any effort from him (Frequency: 3, Intensity: 4, Fit: 5 = **12 MEDIUM**)
+2. **Shareable umbrella link** — "check Improving's calendar" is easier than explaining his specific Meetup URL (Frequency: 3, Intensity: 3, Fit: 5 = **11 MEDIUM**)
 
 ### Negative Driving Forces
 
-1. **FOMO about groups meeting in my own office** — knowing they exist but not knowing when feels like a missed opportunity (Frequency: 4, Intensity: 4, Fit: 5 = **13 MEDIUM**)
-2. **Uncertainty about whether she's welcome** — external community groups in her employer's space creates ambiguity (Frequency: 3, Intensity: 3, Fit: 3 = **9 LOW**)
+1. **Fear of inaccurate listing** — wrong date/time on the calendar sends people to an empty room (Frequency: 2, Intensity: 5, Fit: 4 = **11 MEDIUM**)
+2. **Frustration with invisible community investment** — he volunteers time but new people can't find him (Frequency: 4, Intensity: 4, Fit: 4 = **12 MEDIUM**)
 
 ---
 
-## Priority 2b: Harold the Host — Internal Employee (Event Host)
+## Priority 3: Dawn the Dynamo — Internal Logistics Coordinator
+
+### Who Dawn Is
+
+Dawn Dearstone is the Executive Assistant to the CEO at Improving. She coordinates logistics for ~20 user groups — room bookings, catering, organizer communication. She maintains a Google Sheet tracking all groups, their schedules, organizer contacts, and status. She has moderate technical comfort and zero tolerance for tools that add to her workload.
+
+### Psychological Profile
+
+Dawn is **operationally excellent and fiercely protective of her time**. She manages the CEO's calendar, coordinates executive events, AND handles user group logistics. The groups are a meaningful part of Improving's community identity, but they're one of many responsibilities. She values **systems that work without her intervention** — if something requires her to "also update the calendar," it's dead on arrival.
+
+Dawn takes **quiet pride** in the community ecosystem she enables. She knows every organizer by name, remembers which groups need projectors vs. whiteboards, and handles cancellations with grace. But she doesn't want to be the human API that people query for schedules. Every "Hey Dawn, when does the Python group meet?" is a micro-interruption she'd gladly eliminate.
+
+### Internal State
+
+When Dawn thinks about a public calendar, she feels **cautiously optimistic but wary**. She's seen tools come and go. Her primary emotion is **protectiveness** — protect her time, protect her workflow, protect the accuracy of the information. If the calendar "just works" from her existing sheet, she'll feel **relief and vindication**. If it requires any new task, she'll feel **resentment**.
+
+### Usage Context
+
+Dawn doesn't "use" the calendar in the traditional sense — she's the source, not the consumer. Her interaction is indirect: she maintains the Google Sheet as she already does, and the calendar reads from it. Her success metric is **absence of interaction** — the fewer times she has to think about the calendar, the better. She might check it once after launch to verify accuracy, then never again unless something breaks.
+
+### Relationship to Business Goals
+
+- ✅ **Maximize Community Visibility:** Dawn's sheet is the foundation — without her data, no calendar exists
+- ✅ **Reduce Operational Friction:** Dawn is the PRIMARY beneficiary of this goal — every inquiry the calendar answers is one she doesn't field
+
+### Positive Driving Forces
+
+1. **Eliminate "what's coming up?" inquiries entirely** — her sheet answers the question without her involvement (Frequency: 5, Intensity: 5, Fit: 5 = **15 HIGH**)
+2. **Validation that her existing work powers something visible** — the sheet she maintains becomes publicly valuable (Frequency: 2, Intensity: 3, Fit: 4 = **9 LOW**)
+
+### Negative Driving Forces
+
+1. **Fear of any new maintenance burden** — if the calendar requires even one additional task, it's a design failure (Frequency: 5, Intensity: 5, Fit: 5 = **15 HIGH**)
+2. **Anxiety about data accuracy being her responsibility** — if the calendar shows wrong info, people blame her (Frequency: 3, Intensity: 4, Fit: 3 = **10 LOW**)
+
+---
+
+## Priority 4: Harold the Host — Internal Employee (Event Host)
 
 ### Who Harold Is
 
@@ -131,77 +166,42 @@ Harold checks the calendar early in the week to see what's coming up. He needs t
 
 ---
 
-## Priority 3: Dawn the Dynamo — Internal Logistics Coordinator
+## Priority 5: Imani the Improver — Internal Employee
 
-### Who Dawn Is
+### Who Imani Is
 
-Dawn Dearstone is the Executive Assistant to the CEO at Improving. She coordinates logistics for ~20 user groups — room bookings, catering, organizer communication. She maintains a Google Sheet tracking all groups, their schedules, organizer contacts, and status. She has moderate technical comfort and zero tolerance for tools that add to her workload.
-
-### Psychological Profile
-
-Dawn is **operationally excellent and fiercely protective of her time**. She manages the CEO's calendar, coordinates executive events, AND handles user group logistics. The groups are a meaningful part of Improving's community identity, but they're one of many responsibilities. She values **systems that work without her intervention** — if something requires her to "also update the calendar," it's dead on arrival.
-
-Dawn takes **quiet pride** in the community ecosystem she enables. She knows every organizer by name, remembers which groups need projectors vs. whiteboards, and handles cancellations with grace. But she doesn't want to be the human API that people query for schedules. Every "Hey Dawn, when does the Python group meet?" is a micro-interruption she'd gladly eliminate.
-
-### Internal State
-
-When Dawn thinks about a public calendar, she feels **cautiously optimistic but wary**. She's seen tools come and go. Her primary emotion is **protectiveness** — protect her time, protect her workflow, protect the accuracy of the information. If the calendar "just works" from her existing sheet, she'll feel **relief and vindication**. If it requires any new task, she'll feel **resentment**.
-
-### Usage Context
-
-Dawn doesn't "use" the calendar in the traditional sense — she's the source, not the consumer. Her interaction is indirect: she maintains the Google Sheet as she already does, and the calendar reads from it. Her success metric is **absence of interaction** — the fewer times she has to think about the calendar, the better. She might check it once after launch to verify accuracy, then never again unless something breaks.
-
-### Relationship to Business Goals
-
-- ✅ **Maximize Community Visibility:** Dawn's sheet is the foundation — without her data, no calendar exists
-- ✅ **Reduce Operational Friction:** Dawn is the PRIMARY beneficiary of this goal — every inquiry the calendar answers is one she doesn't field
-
-### Positive Driving Forces
-
-1. **Eliminate "what's coming up?" inquiries entirely** — her sheet answers the question without her involvement (Frequency: 5, Intensity: 5, Fit: 5 = **15 HIGH**)
-2. **Validation that her existing work powers something visible** — the sheet she maintains becomes publicly valuable (Frequency: 2, Intensity: 3, Fit: 4 = **9 LOW**)
-
-### Negative Driving Forces
-
-1. **Fear of any new maintenance burden** — if the calendar requires even one additional task, it's a design failure (Frequency: 5, Intensity: 5, Fit: 5 = **15 HIGH**)
-2. **Anxiety about data accuracy being her responsibility** — if the calendar shows wrong info, people blame her (Frequency: 3, Intensity: 4, Fit: 3 = **10 LOW**)
-
----
-
-## Priority 4: Oscar the Organizer — External Group Leader
-
-### Who Oscar Is
-
-Oscar is a senior engineer who volunteers to run the DFW Pythoneers meetup at Improving's Dallas office. He's been organizing for 3 years, handles his own Meetup.com page, and coordinates with Dawn for room and food. He has 40-60 regular members but wants to grow.
+Imani is a senior consultant at Improving who's been with the company for two years. She works on client projects during the day and often stays late. She's walked past conference rooms buzzing with meetup energy but has no idea what groups are meeting or whether she'd be welcome to sit in.
 
 ### Psychological Profile
 
-Oscar is **passionate about his community but stretched thin**. He organizes because he loves the topic and the people, not because he has spare time. He does everything — finds speakers, promotes events, manages RSVPs, handles no-shows. His biggest growth constraint isn't content quality; it's **reach**. New people don't find his group unless someone tells them.
+Imani is **curious and community-minded** — she chose Improving partly because of its community reputation. But she's also **busy and protective of her evening time**. She won't wander into a random room; she needs to know in advance what's happening so she can plan. She values **intentionality** — if she's staying late, she wants it to be for something worthwhile.
 
-Oscar values **low-effort amplification** — anything that puts his group in front of new eyes without requiring him to do more marketing work. He already maintains his Meetup page; he doesn't want another platform to update. A unified Improving calendar that lists his group alongside 19 others is **free marketing** he didn't have to create.
+She feels a quiet **FOMO** about the groups meeting in her own building. She's heard colleagues mention "the Kubernetes group" or "the Python meetup" but doesn't know when they meet or if they're open to Improving employees. There's an **identity tension**: she works here, but these are external community groups. Is she an insider or a guest?
 
 ### Internal State
 
-When Oscar thinks about growing his group, he feels **optimistic but resource-constrained**. He knows the content is good — retention is high. The gap is discovery. When he imagines a calendar that lists his group alongside others at Improving, he feels **excited about the halo effect** — being part of a portfolio makes each group look more legitimate.
+When Imani thinks about the user groups, she feels **curious but uncertain**. She'd love to attend but doesn't want to intrude or commit to something that doesn't fit. When she discovers a group that aligns with her interests, she feels **validated** — "I work at the right company."
 
 ### Usage Context
 
-Oscar's interaction with the calendar is primarily as a **beneficiary, not a user**. He might share the calendar link on his Meetup page ("See all groups at Improving") or mention it when recruiting speakers ("We're part of Improving's community portfolio"). He checks it occasionally to verify his group's listing is accurate. His success metric: new attendees who say "I found you on Improving's calendar."
+Imani checks the calendar from her desk, usually on Monday or Tuesday, planning her week. She's looking for **this week's events** specifically — not browsing broadly. She wants to see: What's happening Thursday? Is it relevant to my work? Can I just show up? She might also use it to recommend groups to new hires: "Check the calendar — there's a great UX group on the second Wednesday."
 
 ### Relationship to Business Goals
 
-- ✅ **Maximize Community Visibility:** Oscar's group is part of the content that makes the calendar valuable
-- ✅ **Increase Event Attendance:** Oscar directly benefits from new attendees driven by the calendar
+- ✅ **Maximize Community Visibility:** Imani becomes an internal ambassador, sharing the calendar with new hires and clients
+- ✅ **Increase Event Attendance:** Imani adds 1-2 attendees per event she joins, and her presence signals Improving's investment
+- ✅ **Reduce Operational Friction:** Imani currently asks Dawn or colleagues; the calendar answers her questions directly
 
 ### Positive Driving Forces
 
-1. **Free discovery channel for new members** — the calendar markets his group without any effort from him (Frequency: 3, Intensity: 4, Fit: 5 = **12 MEDIUM**)
-2. **Shareable umbrella link** — "check Improving's calendar" is easier than explaining his specific Meetup URL (Frequency: 3, Intensity: 3, Fit: 5 = **11 MEDIUM**)
+1. **Know what's happening in my own building this week** — plan intentionally, not discover by accident (Frequency: 5, Intensity: 4, Fit: 5 = **14 HIGH**)
+2. **Find groups aligned with my professional growth** — discover relevant learning opportunities at zero cost (Frequency: 3, Intensity: 4, Fit: 4 = **11 MEDIUM**)
+3. **Share the calendar with new hires and clients** — be a connector, strengthen Improving's culture story (Frequency: 2, Intensity: 3, Fit: 4 = **9 LOW**)
 
 ### Negative Driving Forces
 
-1. **Fear of inaccurate listing** — wrong date/time on the calendar sends people to an empty room (Frequency: 2, Intensity: 5, Fit: 4 = **11 MEDIUM**)
-2. **Frustration with invisible community investment** — he volunteers time but new people can't find him (Frequency: 4, Intensity: 4, Fit: 4 = **12 MEDIUM**)
+1. **FOMO about groups meeting in my own office** — knowing they exist but not knowing when feels like a missed opportunity (Frequency: 4, Intensity: 4, Fit: 5 = **13 MEDIUM**)
+2. **Uncertainty about whether she's welcome** — external community groups in her employer's space creates ambiguity (Frequency: 3, Intensity: 3, Fit: 3 = **9 LOW**)
 
 ---
 
