@@ -13,10 +13,9 @@
 
 ### Objectives
 
-- **1.1:** 80% reduction in ad-hoc "what's coming up?" inquiries to Dawn within 3 months of launch
-- **1.2:** Zero new data-entry tasks required from Dawn (the sheet she already maintains is the only input)
-- **1.3:** Calendar updates reflect sheet changes within 24 hours (best-effort automation, not real-time)
-- **1.4:** Dawn reports increased capacity for direct organizer engagement and relationship-building activities
+- **1.1:** Zero new data-entry tasks required from Dawn (the sheet she already maintains is the only input)
+- **1.2:** Calendar updates reflect sheet changes within 24 hours (best-effort automation, not real-time)
+- **1.3:** Dawn reports increased capacity for direct organizer engagement and relationship-building activities
 
 ---
 
@@ -27,8 +26,7 @@
 ### Objectives
 
 - **2.1:** 100% of active Improving-hosted user groups listed on the public calendar within 30 days of launch
-- **2.2:** 500+ unique monthly visitors to the calendar page within 6 months of launch
-- **2.3:** At least 3 external referral sources (blog posts, social shares, organizer links) pointing to the calendar within 3 months
+- **2.2:** At least 3 external referral sources (blog posts, social shares, organizer links) pointing to the calendar within 3 months
 
 ---
 
@@ -38,10 +36,8 @@
 
 ### Objectives
 
-- **3.1:** 50+ new CRM contacts added from calendar-driven engagement within 6 months of launch
-- **3.2:** At least 5 user group organizers report new attendees who discovered them through the calendar (qualitative feedback)
-- **3.3:** 30%+ of calendar visitors click through to at least one Meetup event page (engagement rate)
-- **3.4:** 20% of calendar visitors take a secondary action (contact form, social follow, newsletter signup)
+- **3.1:** At least 5 user group organizers report new attendees who discovered them through the calendar (qualitative feedback)
+- **3.2:** 30%+ of calendar visitors click through to at least one Meetup event page (engagement rate)
 
 ---
 

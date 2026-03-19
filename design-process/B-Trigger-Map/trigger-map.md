@@ -28,21 +28,21 @@ Make Improving's community investment visible to the DFW tech ecosystem — ever
 
 ### Objective 1: Maximize Community Visibility
 
-- **Metric:** Unique monthly visitors to calendar page
-- **Target:** 500+ within 6 months
-- **Timeline:** 6 months post-launch
+- **Metric:** External referral sources pointing to the calendar
+- **Target:** 3+ sources (blog posts, social shares, organizer links)
+- **Timeline:** 3 months post-launch
 
 ### Objective 2: Increase Event Attendance
 
-- **Metric:** Average attendance increase across all groups
-- **Target:** 15% increase
+- **Metric:** Organizer-reported new attendees who discovered group via calendar
+- **Target:** At least 5 groups report new members
 - **Timeline:** 6 months post-launch
 
 ### Objective 3: Reduce Operational Friction
 
-- **Metric:** Reduction in ad-hoc schedule inquiries to Dawn
-- **Target:** 80% reduction
-- **Timeline:** 3 months post-launch
+- **Metric:** Zero new maintenance tasks required from Dawn
+- **Target:** Dawn's workflow unchanged
+- **Timeline:** At launch
 
 ---
 
@@ -136,9 +136,9 @@ Make Improving's community investment visible to the DFW tech ecosystem — ever
 %%{init: {'theme':'base', 'themeVariables': { 'fontFamily':'Inter, system-ui, sans-serif', 'fontSize':'14px'}}}%%
 flowchart LR
     %% Business Goals (Left)
-    BG0["<br/>🎯 Maximize Community<br/>Visibility<br/><br/>500+ monthly visitors<br/>100% groups listed<br/>3+ referral sources<br/><br/>"]
-    BG1["<br/>📈 Increase Event<br/>Attendance<br/><br/>15% attendance increase<br/>5+ groups report new members<br/>30%+ click-through rate<br/><br/>"]
-    BG2["<br/>⚡ Reduce Operational<br/>Friction<br/><br/>80% fewer inquiries to Dawn<br/>Zero new tasks for Dawn<br/>24hr sync from sheet<br/><br/>"]
+    BG0["<br/>🎯 Maximize Community<br/>Visibility<br/><br/>100% groups listed<br/>3+ referral sources<br/><br/>"]
+    BG1["<br/>📈 Increase Event<br/>Attendance<br/><br/>5+ groups report new members<br/>30%+ click-through rate<br/><br/>"]
+    BG2["<br/>⚡ Reduce Operational<br/>Friction<br/><br/>Zero new tasks for Dawn<br/>24hr sync from sheet<br/><br/>"]
 
     %% Central Platform
     PLATFORM["<br/>📅 Improving Community<br/>Event Calendar<br/><br/>Public-facing, auto-generated<br/>from Dawn's Google Sheet<br/><br/>One stable URL, always current<br/><br/>"]
