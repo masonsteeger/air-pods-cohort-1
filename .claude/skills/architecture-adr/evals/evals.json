@@ -1,0 +1,23 @@
+{
+  "skill_name": "architecture-adr",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "We decided to use Cosmos DB instead of Azure SQL for storing event data in our calendar app. Cosmos DB gives us flexible schema and global distribution, but Azure SQL was also on the table. Document this as an ADR.",
+      "expected_output": "A properly structured ADR file at ADR-NNN-cosmos-db-event-storage.md with Status, Date, Decision, Rejected Alternative (Azure SQL with rationale), Rationale bullets connected to project constraints/goals, and Implementation Notes.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Start an architecture document for a new internal project: a Microsoft Teams bot that reads from a SharePoint list of upcoming internal training sessions and posts a weekly digest to a Teams channel. The main constraint is that the training coordinators who manage the SharePoint list should not have to do anything new. Reliability matters — if the bot silently stops posting, nobody will notice until weeks later.",
+      "expected_output": "A structured architecture.md with Project Context Summary, Business Goals (prioritized and labeled), Target Users table including the zero-burden constraint user, Core Architectural Constraints table, MVP Functional Requirements, Non-Functional Requirements, and Open Questions. Should call out the silent failure risk and the constraint user's zero-burden requirement explicitly.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this ADR and improve it:\n\n---\n# Decision: Use PostgreSQL\n\nWe will use PostgreSQL for our database.\n\nPostgreSQL is a good database. It is reliable and supports SQL. We have used it before.\n\nWe will set it up on our server.\n---",
+      "expected_output": "A critique identifying missing elements (Status, Date, Rejected Alternative, rationale connected to project constraints/users, implementation notes) followed by a rewritten ADR that applies all conventions from the skill.",
+      "files": []
+    }
+  ]
+}
