@@ -1,5 +1,5 @@
 ---
-stepsCompleted: [1]
+stepsCompleted: [1, 2]
 inputDocuments:
   - 'product-brief-air-pods-cohort-1-2026-02-19.md'
   - 'prd.md'
@@ -15,7 +15,7 @@ inputDocuments:
 workflowType: 'architecture'
 project_name: 'air-pods-cohort-1'
 user_name: 'Improver'
-date: '2026-03-19'
+date: '2026-03-26'
 ---
 
 # Architecture Decision Document
@@ -29,6 +29,11 @@ _This document builds collaboratively through step-by-step discovery. Sections a
 ### What We're Building
 
 A **public-facing event calendar** for Improving-hosted user groups in Dallas. The calendar displays ~20 community-led technology and professional meetups that Improving sponsors with space, food, and logistics.
+
+The system is composed of two distinct layers with a clean boundary between them:
+
+- **Data Pipeline** (this project) — Fetches from Google Sheets, publishes `events.json` to Azure Blob Storage
+- **Presentation Layer** (separate concern, future) — Consumes `events.json` and renders the user-facing calendar
 
 ### Business Goals (Prioritized)
 
@@ -59,33 +64,63 @@ A **public-facing event calendar** for Improving-hosted user groups in Dallas. T
 
 ### MVP Functional Requirements
 
-1. **Unified Event Listing** — All upcoming events on a single public page
+1. **Unified Event Listing** — All upcoming events on a single public endpoint
 2. **Event Details** — Group name, date/time, location, Meetup link, status
 3. **Google Sheet Integration** — Auto-sync within 24 hours of changes
 4. **Stable URL** — Permanent, shareable, bookmarkable
-5. **Cancellation Visibility** — Show cancelled events clearly (don't remove them)
-6. **Meetup Link Click-Through** — Prominent links to RSVP on Meetup.com
-7. **Chronological Display** — Nearest events first
+5. **Cancellation Visibility** — Cancelled events included in JSON (not removed)
+6. **Meetup Link** — Each event includes RSVP link to Meetup.com
+7. **Chronological Order** — Events sorted nearest-first in published JSON
 
 ### Non-Functional Requirements
 
+#### Data Pipeline (this project)
+
+- `events.json` updated within 24 hours of sheet changes
+- 99% pipeline availability
+- Failure notification to technical team (not Dawn)
+- Diagnostic artifacts retained in Azure Blob Storage for IT access
+
+#### Presentation Layer (out of scope — future)
+
 - Page load < 3 seconds
-- 99% availability
 - WCAG 2.1 AA accessibility
 - Mobile responsive
 - SEO indexable
 - No authentication required
 
-### Open Questions (From PRD)
+> **Note:** SEO is not a concern of the data pipeline. It is the responsibility of the presentation layer that consumes `events.json`. The pipeline's contract is well-structured, reliable JSON — not rendered HTML.
 
-1. **Sheet access:** Service account? Published CSV?
-2. **Hosting:** Improving subdomain or standalone?
-3. **Design:** Match Improving brand guidelines or clean functional?
-4. **Analytics:** Track visitor metrics?
-5. **Failure notification:** Notify Dawn if sync fails?
+### Open Questions (From PRD) — Resolved
+
+| Question | Decision |
+|---|---|
+| Sheet access: Service account or Published CSV? | **Service account** — see ADR-001 |
+| Hosting: Improving subdomain or standalone? | **Improving subdomain** — see ADR-004 |
+| Design: Brand guidelines or clean functional? | Out of scope for data pipeline; deferred to presentation layer |
+| Analytics: Track visitor metrics? | Out of scope for now |
+| Failure notification: Notify Dawn if sync fails? | **No — notify technical team only** — see ADR-006 |
 
 ---
 
-## Next Steps
+## Architectural Decisions
 
-**[C]** Continue to project context analysis → Begin architectural decision making (technology selection, system design, integration patterns)
+| ADR | Title | Status |
+|---|---|---|
+| [ADR-001](adr/ADR-001-google-sheets-service-account.md) | Google Sheets Access via Service Account | Accepted |
+| [ADR-002](adr/ADR-002-google-sheets-range-strategy.md) | Google Sheets Range Strategy | Accepted |
+| [ADR-003](adr/ADR-003-pipeline-architecture.md) | Pipeline Architecture — Scheduled Azure Function | Accepted |
+| [ADR-004](adr/ADR-004-output-format-and-hosting.md) | Output Format and Hosting | Accepted |
+| [ADR-005](adr/ADR-005-credentials-management.md) | Credentials Management | Accepted |
+| [ADR-006](adr/ADR-006-observability-and-failure-handling.md) | Observability and Failure Handling | Accepted |
+
+---
+
+## Deferred Decisions
+
+| Decision | Status |
+|---|---|
+| JSON schema (event data structure) | Deferred — define before implementation begins |
+| Presentation layer architecture | Out of scope for this project |
+| Analytics | Out of scope for now |
+| Subdomain name | Pending IT confirmation |
