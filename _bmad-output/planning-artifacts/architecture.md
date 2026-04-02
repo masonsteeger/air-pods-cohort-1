@@ -33,23 +33,18 @@ A **public-facing event calendar** for Improving-hosted user groups in Dallas. T
 The system is composed of two distinct layers with a clean boundary between them:
 
 - **Data Pipeline** (this project) — Fetches from Google Sheets, publishes `events.json` to Azure Blob Storage
-- **Presentation Layer** (separate concern, future) — Consumes `events.json` and renders the user-facing calendar
+- **Simple Calendar Viewer** (separate concern, future) — Basic debugging and visualization tool; consumes `events.json` and renders a simple calendar for inspection and validation
 
-### Business Goals (Prioritized)
+### Why We're Building This
 
-1. **Reduce Operational Friction** (PRIMARY) — Free Dawn from calendar inquiries; her existing Google Sheet becomes the automatic source
-2. **Maximize Community Visibility** (ENABLER) — Make Improving's community investment discoverable to the DFW tech ecosystem
-3. **Strengthen Community Connections** (VALIDATION) — Convert visibility into meaningful relationships and CRM pipeline growth
+**Problem:** Dawn (logistics coordinator) manually answers calendar inquiries. This creates operational friction and limits visibility of Improving's community investment.
 
-### Target Users
+**Success looks like:**
+1. **Reduce Operational Friction** — System reads existing Google Sheet; zero new burden on Dawn
+2. **Maximize Community Visibility** — Reliable data published to permanent, shareable URL
+3. **Strengthen Community Connections** — Enable external group leaders and community members to discover all Dallas tech groups in one place
 
-| Priority | User | Role | Key Need |
-|----------|------|------|----------|
-| 1 | Prospective Pete | External community member | Discover all DFW tech groups in one place |
-| 2 | Imani the Improver | Internal employee | Know what's happening in her building this week |
-| 2b | Harold the Host | Internal event host | Prepare for events he's hosting |
-| 3 | Dawn the Dynamo | Logistics coordinator | Zero new maintenance burden (constraint user) |
-| 4 | Oscar the Organizer | External group leader | Free discovery channel for his group |
+**For detailed user journeys and personas**, see [PRD](prd.md#target-users).
 
 ### Core Architectural Constraints
 
@@ -76,20 +71,21 @@ The system is composed of two distinct layers with a clean boundary between them
 
 #### Data Pipeline (this project)
 
-- `events.json` updated within 24 hours of sheet changes
-- 99% pipeline availability
-- Failure notification to technical team (not Dawn)
+- `events.json` updated once daily on a fixed schedule (hardcoded; configurable at deployment in future)
+- If sheet input validation fails, pipeline halts immediately; previous valid `events.json` remains in Blob Storage
+- If processing fails mid-stream (after validation), previous valid `events.json` remains in Blob Storage
+- Availability depends on Azure Blob Storage uptime; no custom resilience layer
+- Failure notification to technical team (not Dawn) via third-party monitoring service
 - Diagnostic artifacts retained in Azure Blob Storage for IT access
 
-#### Presentation Layer (out of scope — future)
+#### Simple Calendar Viewer (out of scope — future)
 
-- Page load < 3 seconds
-- WCAG 2.1 AA accessibility
-- Mobile responsive
-- SEO indexable
-- No authentication required
+- Simple, functional display of events
+- Basic HTML/CSS — no complex UI framework required
+- For internal debugging and validation only
+- Deployed to Azure Blob Storage alongside `events.json`
 
-> **Note:** SEO is not a concern of the data pipeline. It is the responsibility of the presentation layer that consumes `events.json`. The pipeline's contract is well-structured, reliable JSON — not rendered HTML.
+> **Note:** The Simple Calendar Viewer is a debugging tool, not a public-facing interface. The pipeline's responsibility is well-structured, reliable JSON. Any public calendar interface would be a separate concern and would consume the same `events.json` output.
 
 ### Open Questions (From PRD) — Resolved
 
@@ -120,7 +116,7 @@ The system is composed of two distinct layers with a clean boundary between them
 
 | Decision | Status |
 |---|---|
-| JSON schema (event data structure) | Deferred — define before implementation begins |
-| Presentation layer architecture | Out of scope for this project |
+| JSON schema (event data structure) | Deferred — will be reverse-engineered from spreadsheet structure (single source of truth) |
+| Configurable sync schedule | Deferred — hardcoded at launch; can be made configurable at deployment in future iterations |
 | Analytics | Out of scope for now |
 | Subdomain name | Pending IT confirmation |
