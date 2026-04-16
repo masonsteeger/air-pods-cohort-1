@@ -1,0 +1,37 @@
+[
+  {
+    "groupName": "DFW JavaScript Builders",
+    "eventTitle": "TypeScript Patterns Night",
+    "startDateTime": "2026-04-22T18:30:00-05:00",
+    "location": "Improving Dallas - Room Atlas",
+    "status": "active",
+    "meetupUrl": "https://www.meetup.com/dfw-js-builders/events/123456789/",
+    "topic": "Architecture"
+  },
+  {
+    "groupName": "Dallas Cloud Collective",
+    "eventTitle": "Kubernetes in Production",
+    "startDateTime": "2026-04-29T18:00:00-05:00",
+    "location": "Improving Dallas - Room Orion",
+    "status": "active",
+    "meetupUrl": "https://www.meetup.com/dallas-cloud-collective/events/987654321/",
+    "topic": "Cloud"
+  },
+  {
+    "groupName": "Women in Product DFW",
+    "eventTitle": "Cancelled: Product Discovery Roundtable",
+    "startDateTime": "2026-05-03T18:15:00-05:00",
+    "location": "Improving Dallas - Room Apollo",
+    "status": "cancelled",
+    "meetupUrl": "https://www.meetup.com/women-in-product-dfw/events/223344556/",
+    "topic": "Product"
+  },
+  {
+    "groupName": "Data Engineering North Texas",
+    "eventTitle": "Lakehouse Office Hours",
+    "startDateTime": "2026-05-08T18:45:00-05:00",
+    "location": "Improving Dallas - Room Vega",
+    "status": "active",
+    "meetupUrl": "not-a-valid-url"
+  }
+]

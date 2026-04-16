@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Improving Community Calendar Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-1: #0f172a;
+        --bg-2: #111827;
+        --bg-3: #1f2937;
+        --surface: rgba(15, 23, 42, 0.74);
+        --surface-border: rgba(148, 163, 184, 0.25);
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #22d3ee;
+        --accent-2: #10b981;
+        --danger: #f87171;
+        --danger-bg: rgba(248, 113, 113, 0.15);
+        --ok-bg: rgba(16, 185, 129, 0.16);
+        --shadow: 0 20px 45px rgba(2, 8, 23, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        font-family: "IBM Plex Sans", sans-serif;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 20% -10%, rgba(34, 211, 238, 0.2), transparent 38%),
+          radial-gradient(circle at 82% 0%, rgba(16, 185, 129, 0.18), transparent 35%),
+          linear-gradient(140deg, var(--bg-1), var(--bg-2) 35%, var(--bg-3));
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 2rem 1rem 3rem;
+      }
+
+      .hero {
+        border: 1px solid var(--surface-border);
+        background: linear-gradient(160deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.65));
+        border-radius: 1.25rem;
+        box-shadow: var(--shadow);
+        padding: 1.5rem;
+        backdrop-filter: blur(8px);
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin: 0 0 0.5rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        line-height: 1.05;
+      }
+
+      .hero p {
+        margin: 0.8rem 0 0;
+        color: var(--muted);
+        max-width: 62ch;
+      }
+
+      .meta {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .chip {
+        border: 1px solid var(--surface-border);
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+        font-size: 0.82rem;
+        color: var(--text);
+        background: rgba(15, 23, 42, 0.45);
+      }
+
+      .events {
+        list-style: none;
+        margin: 1.25rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .event-card {
+        border: 1px solid var(--surface-border);
+        border-radius: 1rem;
+        background: var(--surface);
+        padding: 1rem;
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.8rem;
+      }
+
+      .event-card.cancelled {
+        border-color: rgba(248, 113, 113, 0.45);
+        background: linear-gradient(120deg, var(--danger-bg), rgba(15, 23, 42, 0.78));
+      }
+
+      .event-title {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.18rem;
+      }
+
+      .event-group {
+        margin: 0.35rem 0 0;
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
+
+      .event-grid {
+        margin-top: 0.75rem;
+        display: grid;
+        gap: 0.4rem;
+        color: #cbd5e1;
+        font-size: 0.92rem;
+      }
+
+      .status {
+        align-self: start;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .status.active {
+        color: #6ee7b7;
+        background: var(--ok-bg);
+      }
+
+      .status.cancelled {
+        color: #fecaca;
+        background: var(--danger-bg);
+      }
+
+      .actions {
+        margin-top: 0.85rem;
+      }
+
+      .action-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        border-radius: 0.6rem;
+        text-decoration: none;
+        border: 1px solid rgba(34, 211, 238, 0.45);
+        color: var(--text);
+        background: rgba(34, 211, 238, 0.1);
+        padding: 0.44rem 0.7rem;
+        font-size: 0.88rem;
+        transition: transform 140ms ease;
+      }
+
+      .action-link:hover {
+        transform: translateY(-1px);
+      }
+
+      .action-link.disabled {
+        opacity: 0.52;
+        pointer-events: none;
+      }
+
+      .empty-state {
+        border: 1px dashed rgba(148, 163, 184, 0.5);
+        border-radius: 1rem;
+        padding: 1.6rem;
+        text-align: center;
+        color: var(--muted);
+        background: rgba(15, 23, 42, 0.45);
+      }
+
+      @media (max-width: 700px) {
+        .event-card {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">Prototype / Single Public Page</p>
+        <h1>Improving Community Event Calendar</h1>
+        <p>
+          One stable place to discover Improving-hosted groups, check status, and jump to Meetup for RSVP.
+        </p>
+        <div class="meta">
+          <span class="chip" id="event-count">0 events</span>
+          <span class="chip" id="updated-at">Last updated: --</span>
+        </div>
+      </section>
+
+      <ul class="events" id="events-list"></ul>
+      <section class="empty-state" id="empty-state" hidden>
+        No upcoming events.
+      </section>
+    </main>
+
+    <script id="embedded-fallback" type="application/json">
+      [
+        {
+          "groupName": "DFW JavaScript Builders",
+          "eventTitle": "TypeScript Patterns Night",
+          "startDateTime": "2026-04-22T18:30:00-05:00",
+          "location": "Improving Dallas - Room Atlas",
+          "status": "active",
+          "meetupUrl": "https://www.meetup.com/dfw-js-builders/events/123456789/",
+          "topic": "Architecture"
+        }
+      ]
+    </script>
+
+    <script>
+      const eventsList = document.getElementById("events-list");
+      const emptyState = document.getElementById("empty-state");
+      const eventCount = document.getElementById("event-count");
+      const updatedAt = document.getElementById("updated-at");
+
+      function parseSafeDate(value) {
+        const timestamp = Date.parse(value);
+        return Number.isNaN(timestamp) ? Number.POSITIVE_INFINITY : timestamp;
+      }
+
+      function formatDateTime(isoValue) {
+        const date = new Date(isoValue);
+        if (Number.isNaN(date.getTime())) {
+          return "Date TBD";
+        }
+        return date.toLocaleString([], {
+          weekday: "short",
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit"
+        });
+      }
+
+      function isValidUrl(url) {
+        try {
+          const parsed = new URL(url);
+          return parsed.protocol === "http:" || parsed.protocol === "https:";
+        } catch {
+          return false;
+        }
+      }
+
+      function renderEvents(items) {
+        eventsList.innerHTML = "";
+
+        if (!items.length) {
+          emptyState.hidden = false;
+          eventCount.textContent = "0 events";
+          return;
+        }
+
+        emptyState.hidden = true;
+        eventCount.textContent = `${items.length} event${items.length === 1 ? "" : "s"}`;
+
+        const sortedItems = [...items].sort(
+          (a, b) => parseSafeDate(a.startDateTime) - parseSafeDate(b.startDateTime)
+        );
+
+        for (const event of sortedItems) {
+          const status = (event.status || "active").toLowerCase();
+          const isCancelled = status === "cancelled";
+          const topic = event.topic || "General tech";
+          const title = event.eventTitle || "Untitled event";
+          const group = event.groupName || "Improving Group";
+          const location = event.location || "Location TBD";
+          const meetupUrl = event.meetupUrl;
+          const validMeetupUrl = isValidUrl(meetupUrl);
+
+          if (!validMeetupUrl) {
+            console.warn("Invalid Meetup URL for event:", title);
+          }
+
+          const li = document.createElement("li");
+          li.className = `event-card${isCancelled ? " cancelled" : ""}`;
+
+          li.innerHTML = `
+            <div>
+              <h2 class="event-title">${title}</h2>
+              <p class="event-group">${group}</p>
+              <div class="event-grid">
+                <span><strong>When:</strong> ${formatDateTime(event.startDateTime)}</span>
+                <span><strong>Where:</strong> ${location}</span>
+                <span><strong>Topic:</strong> ${topic}</span>
+              </div>
+              <div class="actions">
+                <a
+                  class="action-link${validMeetupUrl ? "" : " disabled"}"
+                  href="${validMeetupUrl ? meetupUrl : "#"}"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ${validMeetupUrl ? "View on Meetup" : "Meetup link unavailable"}
+                </a>
+              </div>
+            </div>
+            <span class="status ${isCancelled ? "cancelled" : "active"}">
+              ${isCancelled ? "Cancelled" : "Active"}
+            </span>
+          `;
+
+          eventsList.appendChild(li);
+        }
+      }
+
+      async function loadEvents() {
+        try {
+          const response = await fetch("./events.sample.json", { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error(`Failed with status ${response.status}`);
+          }
+          const data = await response.json();
+          return Array.isArray(data) ? data : [];
+        } catch {
+          const fallbackText = document.getElementById("embedded-fallback").textContent;
+          return JSON.parse(fallbackText);
+        }
+      }
+
+      async function init() {
+        const events = await loadEvents();
+        renderEvents(events);
+        updatedAt.textContent = `Last updated: ${new Date().toLocaleString()}`;
+      }
+
+      init();
+    </script>
+  </body>
+</html>
