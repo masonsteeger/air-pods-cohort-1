@@ -1,0 +1,8 @@
+config:
+  brief_level: complete
+
+phase_status:
+  phase_1_product_brief: complete
+  phase_2_trigger_mapping: complete
+  phase_3_ux_scenarios: not_started
+  phase_4_ux_design: not_started
