@@ -7,14 +7,13 @@ Output Folder: _bmad-output
 
 ## Current
 
-- **Phase 4: UX Design (Freya) — ready to start.** Phase 3 complete as of 2026-04-30. Begin with reconciliation step comparing existing out-of-band artifacts against scenario requirements.
+- **Phase 4: UX Design (Freya) — Calendar Home complete.** 404 skipped per user request. Prototype validated against scenario requirements.
 
 ## Backlog
 
-- Phase 4 step 1: Reconcile existing artifacts (`planning-artifacts/ux-design-specification.md`, `calendar-layout-options.md`, `implementation-artifacts/spec-quick-prototype-*`) against Phase 3 scenario requirements
-- Phase 4: Calendar Home page specification, wireframes, component definitions
-- Phase 4: 404 page specification
-- Phase 4: Resolve cross-scenario design tensions (row hierarchy, identity anchor, mixed endpoints)
+- Phase 5: Agentic Development (implementation)
+- Optional: 404 page specification
+- Optional: OG meta tags for link previews
 
 ## Progress
 
@@ -96,6 +95,34 @@ No critical gaps. All scenarios meet or exceed minimum thresholds.
 - Mixed scenario endpoints — scenarios 01 (external) and 02/03 (internal) end differently; page must be gateway AND standalone destination
 
 **Next:** Phase 4 - UX Design
+
+### 2026-04-30 - Phase 4: Calendar Home UX Design COMPLETE
+
+**Agent:** Freya (UX Designer)
+**Mode:** Suggest mode
+
+**Reconciliation completed:**
+- `calendar-layout-options.md` — Option C (week grid) deferred; chronological list validated for MVP density
+- `prototype/index.html` — Already implements spec; no gaps identified
+- `spec-quick-prototype` — Confirmed done
+
+**Design decisions made:**
+- Layout: Chronological list (not week grid)
+- Row hierarchy: Group Name → Date/Time (location omitted — always Improving Dallas)
+- Identity anchor: "Improving Community Event Calendar" header
+- Freshness indicator: "Last synced" timestamp in header
+
+**Cross-scenario tensions resolved:**
+- Row hierarchy balances Pete (group), Imani (location), Oscar (group)
+- Mixed endpoints supported: page works as gateway AND standalone destination
+- Identity anchor satisfies Oscar's share-credibility requirement
+
+**Artifacts updated:**
+- `planning-artifacts/ux-design-specification.md` — Calendar Home section added
+
+**Skipped:** 404 page (per user request)
+
+**Next:** Phase 5 - Agentic Development (or production implementation)
 
 ## Key Decisions
 
